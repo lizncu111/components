@@ -1,0 +1,314 @@
+  <link rel="stylesheet" href="./header.css" />
+  <link rel="stylesheet" href="./index.css" />
+  <link rel="stylesheet" href="./base.css" />
+  <div class="new_header">
+    <div class="main-1200 clearfix">
+      <a href="__APP__/index.php/Admin/Index" target="_self" class="txt"
+        ><img class="logo" src="__PUBLIC__/images/logo.png" />
+      </a>
+      <ul class="nav-ul clearfix">
+        <li class="nav-item">
+          <a href="__APP__/index.php/Admin/Index" target="_self" class="txt"
+            >首页</a
+          >
+        </li>
+        <!-- <volist name="menu_list" id="menu_list">
+          <li class="nav-item">
+            <a
+              href="__APP__/index.php/Admin/{$menu_list['url']}"
+              target="_self"
+              class="txt"
+              >{$menu_list['name']}</a
+            >
+          </li>
+        </volist> -->
+        <li class="nav-item">
+          <a
+            href="__APP__/index.php/Admin/About/Introduce"
+            target="_self"
+            class="txt"
+            >走进精信</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="__APP__/index.php/Admin/News/News" target="_self" class="txt"
+            >新闻中心</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            href="__APP__/index.php/Admin/Industry/Communicate"
+            target="_self"
+            class="txt"
+            >产业布局</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            href="__APP__/index.php/Admin/Responsibility/Charitable"
+            target="_self"
+            class="txt"
+            >社会责任</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            href="__APP__/index.php/Admin/Recruit/Concept"
+            target="_self"
+            class="txt"
+            >人力资源</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            href="__APP__/index.php/Admin/Contact/Contact"
+            target="_self"
+            class="txt"
+            >联系我们</a
+          >
+        </li>
+        <div class="search-icon">
+        </div>
+      </ul>
+      <div class="search-container">
+      <div class="search-box">
+        <input type="text" placeholder="输入搜索内容">
+        <div class="search-icon1">
+        </div>
+      </div>
+      <div class="false-search-icon">
+      </div>
+    </div>
+      
+  </div>
+  <style>
+    .search-container{
+      display: inline-block;
+      opacity: 0;
+    }
+    .search-icon {
+      position: relative;
+      width: 50px;
+      height: 50px;
+      /* border: 1px solid red; */
+      /* margin: 0 auto; */
+      left: 60px;
+      bottom: 0px;
+      background-image: url("./icons/search.svg");
+      background-repeat:no-repeat;
+	    background-size:23px;
+      background-position: center;
+      display: inline-block;
+      z-index: 999;
+    }
+    .search-box {
+      position: relative;
+      width: 380px;
+      height: 50px;
+      /* border: 1px solid #d4d4d4; */
+      /* margin: 0 auto; */
+      left: 500px;
+      top: 2px;
+      display: inline-block;
+      margin-right: 0px;
+      /* box-shadow: 1px 1px 2px 1px gray; */
+      
+    }
+    .search-box input{
+      width: 100%;
+      height: 48px;
+      border: 1px solid #d4d4d4;
+      line-height: 48px;
+      padding-left: 20px;
+      outline: none;
+      font-size: 16px;
+      padding-right: 50px;
+      background-color: #fff;
+      box-shadow: 1px 1px 2px 1px gray;
+      
+    }
+    .search-icon1 {
+      position: relative;
+      width: 50px;
+      height: 50px;
+      /* border: 1px solid red; */
+      /* margin: 0 auto; */
+      left: 328px;
+      bottom: 47px;
+      background-image: url("./icons/search_1.svg");
+      background-repeat:no-repeat;
+	    background-size:28px;
+      background-position: center;
+      display: inline-block;
+      
+    }
+    .false-search-icon {
+      position: relative;
+      width: 50px;
+      height: 50px;
+      /* border: 1px solid red; */
+      /* margin: 0 auto; */
+      left: 530px;
+      bottom: 47px;
+      background-image: url("./icons/false.svg");
+      background-repeat:no-repeat;
+	    background-size:28px;
+      background-position: center;
+
+      display: inline-block;
+    }
+     /* new style */
+    .nav-ul {
+      transition: all .3s ease-in-out;
+    }
+    .slide-in-blurred-right {
+      /* animation: stereotype-anime  .6s ease-in-out; */
+      -webkit-animation: slide-in-blurred-right 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+      animation: slide-in-blurred-right 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    }
+    .reverse-slide-in-blurred-right {
+      -webkit-animation: reverse-slide-in-blurred-right 0.6s cubic-bezier(0.320, 1.000, 0.230, 1.000) both;
+      animation: reverse-slide-in-blurred-right 0.6s cubic-bezier(0.320, 1.000, 0.230, 1.000) both;
+    }
+    /* @keyframes stereotype-anime {
+      0%{transform: scale(0,0);}
+      100%{transform: scale(1,1);}
+    } */
+    @-webkit-keyframes slide-in-blurred-right {
+    0% {
+      -webkit-transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+              transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+      -webkit-transform-origin: 0% 50%;
+              transform-origin: 0% 50%;
+      -webkit-filter: blur(40px);
+              filter: blur(40px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+              transform: translateX(0) scaleY(1) scaleX(1);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      -webkit-filter: blur(0);
+              filter: blur(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-blurred-right {
+    0% {
+      -webkit-transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+              transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+      -webkit-transform-origin: 0% 50%;
+              transform-origin: 0% 50%;
+      -webkit-filter: blur(40px);
+              filter: blur(40px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+              transform: translateX(0) scaleY(1) scaleX(1);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      -webkit-filter: blur(0);
+              filter: blur(0);
+      opacity: 1;
+    }
+    }
+
+
+
+
+    @-webkit-keyframes reverse-slide-in-blurred-right {
+    
+    0% {
+      -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+              transform: translateX(0) scaleY(1) scaleX(1);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      -webkit-filter: blur(0);
+              filter: blur(0);
+      opacity: 1;
+    }
+    99% {
+      -webkit-transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+              transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+      -webkit-transform-origin: 0% 50%;
+              transform-origin: 0% 50%;
+      -webkit-filter: blur(40px);
+              filter: blur(40px);
+      opacity: 0;
+    }
+    100%{
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      opacity: 0;
+    }
+  }
+  @keyframes reverse-slide-in-blurred-right {
+    0% {
+      -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+              transform: translateX(0) scaleY(1) scaleX(1);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      -webkit-filter: blur(0);
+              filter: blur(0);
+      opacity: 1;
+    }
+    99% {
+      -webkit-transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+              transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+      -webkit-transform-origin: 0% 50%;
+              transform-origin: 0% 50%;
+      -webkit-filter: blur(40px);
+              filter: blur(40px);
+      opacity: 0;
+    }
+    100%{
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      opacity: 0;
+    }
+    }
+  </style>
+
+  <script>
+    const searchIcon = document.querySelector(".search-icon");
+    const searchContainer = document.querySelector(".search-container");
+    const falseIcon = document.querySelector(".false-search-icon");
+    const nav = document.querySelector(".nav-ul");
+    const Winheight = window.screen.height;
+    const Winwidth = window.screen.width;
+
+    console.log(Winheight,Winheight)
+
+    searchIcon.addEventListener("click",(e)=>{
+            console.log(111);
+
+              nav.style.transform = `scale(0)`;
+              viewNavFlag = false;
+              searchContainer.classList.remove("reverse-slide-in-blurred-right");
+              void searchContainer.scrollWidth;
+              searchContainer.classList.add("slide-in-blurred-right");
+              
+              searchIcon.style.transform = `scale(0)`;
+              falseIcon.style.transform = `scale(1)`;
+            });
+    falseIcon.addEventListener("click",(e)=>{
+              console.log(222);
+              nav.style.transform = `scale(1)`;
+              viewNavFlag = true;
+
+              searchContainer.classList.remove("slide-in-blurred-right");
+              void searchContainer.scrollWidth;
+              searchContainer.classList.add("reverse-slide-in-blurred-right");
+              
+
+              searchIcon.style.transform = `scale(1)`;
+              falseIcon.style.transform = `scale(0)`;
+              
+            });        
+  </script>

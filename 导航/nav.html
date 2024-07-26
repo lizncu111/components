@@ -1,0 +1,164 @@
+<style>
+    body {
+      font-family: "PingFang SC Regular";
+    }
+    .top-banner {
+      height: 288px;
+      width: 100%;
+      background-color: #d9d9d9;
+    }
+    .top-nav {
+      display: flex;
+      justify-content: center;
+      background: #fff;
+      box-shadow: 0px 4px 4px 0px rgba(214, 214, 214, 0.25);
+    }
+    .top-nav-item {
+      width: 165px;
+      height: 28px;
+      /* border: 1px solid red; */
+      font-size: 11px;
+      /* font-family: "PingFang SC Regular"; */
+      font-weight: 400;
+      line-height: 28px;
+      text-align: center;
+    }
+    .top-nav-item a {
+      text-decoration: none;
+      color: #000;
+    }
+    .item-selected {
+      background: #381c62;
+    }
+    .item-selected a {
+      color: #fff;
+    }
+    .w-960 {
+      width: 960px;
+      margin: 0 auto;
+      /* border: 1px solid red; */
+    }
+    .who {
+      position: relative;
+      margin-top: 80px;
+      margin-bottom: 80px;
+      /* border: 1px solid gray; */
+      height: 342px;
+    }
+    .who-left {
+      height: 342px;
+      width: 459px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      /* border: 1px solid blue; */
+    }
+    .who-right {
+      height: 342px;
+      width: 467px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      /* border: 1px solid blue; */
+      background-color: #d9d9d9;
+    }
+    /* .who-left P {
+      margin: 0;
+    } */
+    .who-left-p1 {
+      color: #000;
+      font-family: "PingFang SC Regular" !important;
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 16px; /* 72.727% */
+      margin: 0;
+    }
+    .who-left-p2 {
+      color: #000;
+      font-family: "PingFang SC Regular" !important;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16px; /* 114.286% */
+      margin: 0;
+      margin-top: 32px;
+    }
+    .who-left-p3 {
+      color: #666;
+      text-align: justify;
+      font-family: "PingFang SC Regular" !important;
+      font-size: 11px;
+      font-weight: 400;
+      line-height: 18px; /* 163.636% */
+      margin: 0;
+      margin-top: 10px;
+    }
+    a{
+        
+    }
+  </style>
+
+<div class="top-nav">
+    <div class="top-nav-item item-selected">
+      <a
+        href=""
+        target="_self"
+        class="txt"
+        >精信简介</a
+      >
+    </div>
+    <div class="top-nav-item">
+      <a
+        href=""
+        target="_self"
+        class="txt"
+        >发展历程</a
+      >
+    </div>
+    <div class="top-nav-item">
+      <a
+        href=""
+        target="_self"
+        class="txt"
+        >荣誉资质</a
+      >
+    </div>
+    <div class="top-nav-item">
+      <a
+        href=""
+        target="_self"
+        class="txt"
+        >企业文化</a
+      >
+    </div>
+    <div class="top-nav-item">
+      <a
+        href=""
+        target="_self"
+        class="txt"
+        >精信月刊</a
+      >
+    </div>
+  </div>
+
+  <script>
+    const items = document.querySelectorAll(".top-nav-item");
+    const aElements = document.querySelectorAll(".top-nav-item>a");
+    let selectItem = document.querySelector(".item-selected");
+    for(let i=0;i<items.length;i++)
+    {
+        items[i].addEventListener("click",(e)=>{
+            selectItem.classList.remove("item-selected");
+            items[i].classList.add("item-selected");
+            selectItem = e.target;
+            console.log(`${e.target}`);
+        });
+        aElements[i].addEventListener("click",(e)=>{
+            e.preventDefault();
+            e.stopPropagation();
+            selectItem.classList.remove("item-selected");
+            items[i].classList.add("item-selected");
+            selectItem = e.target.parentNode;
+            console.log(`${selectItem}`);
+        });
+    }
+  </script>
