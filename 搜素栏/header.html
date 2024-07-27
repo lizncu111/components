@@ -286,7 +286,7 @@
     console.log(Winheight,Winheight)
 
     searchIcon.addEventListener("click",(e)=>{
-            console.log(111);
+              console.log(111);
 
               nav.style.transform = `scale(0)`;
               viewNavFlag = false;
@@ -295,20 +295,22 @@
               searchContainer.classList.add("slide-in-blurred-right");
               
               searchIcon.style.transform = `scale(0)`;
-              falseIcon.style.transform = `scale(1)`;
+              //falseIcon.style.transform = `scale(1)`;
             });
     falseIcon.addEventListener("click",(e)=>{
               console.log(222);
+
               nav.style.transform = `scale(1)`;
+              nav.style.zIndex = 999;
               viewNavFlag = true;
 
               searchContainer.classList.remove("slide-in-blurred-right");
               void searchContainer.scrollWidth;
               searchContainer.classList.add("reverse-slide-in-blurred-right");
-              
 
               searchIcon.style.transform = `scale(1)`;
-              falseIcon.style.transform = `scale(0)`;
+              
+              //falseIcon.style.transform = `scale(0)`;
               
             });        
   </script>
